@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Responsive Sidebar Menu | CodingLab</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class="bx bxs-bank icon"></i>
+        <div class="logo_name">N O V A</div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <i class="bx bx-search"></i>
+          <input type="text" placeholder="Search..." />
+          <span class="tooltip">Search</span>
+        </li>
+        <li>
+          <a href="#" onclick="homePage()" class="active">
+            <i onclick="homePage()" class="bx bxs-home"></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+          <span class="tooltip">Dashboard</span>
+        </li>
+        <li>
+          <a href="#" onclick="transactionPage()" class="inactive">
+            <i class="bx bx-transfer-alt"></i>
+            <span class="links_name">Transactions</span>
+          </a>
+          <span class="tooltip">Transactions</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-user"></i> <span class="links_name">Accounts</span>
+          </a>
+          <span class="tooltip">Accounts</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-pie-chart-alt-2"></i>
+            <span class="links_name">Investment</span>
+          </a>
+          <span class="tooltip">Investment</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-credit-card"></i>
+            <span class="links_name">Credit Card</span>
+          </a>
+          <span class="tooltip">Card</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-dollar-circle"></i>
+            <span class="links_name">Loans</span>
+          </a>
+          <span class="tooltip">Loans</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-check-circle"></i>
+            <span class="links_name">Services</span>
+          </a>
+          <span class="tooltip">Services</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-bulb"></i>
+            <span class="links_name">My Priviledges</span>
+          </a>
+          <span class="tooltip">Setting</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-cog"></i>
+            <span class="links_name">Setting</span>
+          </a>
+          <span class="tooltip">Setting</span>
+        </li>
+        <li class="profile">
+          <div class="profile-details">
+            <img src="images/Mask Group.svg" alt="profileImg" />
+            <div class="name_job">
+              <div class="name">Abiodun</div>
+              <div class="job">Web designer</div>
+            </div>
+          </div>
+          <i class="bx bx-log-out" id="log_out"></i>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section" id="home">
+      <div class="header">
+        <div class="hamburger-menu">
+          <div class="hambar bar1"></div>
+          <div class="hambar bar2"></div>
+          <div class="hambar bar3"></div>
+        </div>
+        <div class="off-screen-menu">
+          <ul class="nav-off">
+            <li onclick="homePage()">
+              <img src="images/Dh Home.svg" alt="" />
+              <p>Dashboard</p>
+            </li>
+            <li onclick="transactionPage()">
+              <img src="images/Tr home.svg" alt="" />
+              <p>Transaction</p>
+            </li>
+            <li>
+              <img src="images/Ur home.svg" alt="" />
+              <p>Accounts</p>
+            </li>
+            <li>
+              <img src="images/In home.svg" alt="" />
+              <p>Investment</p>
+            </li>
+            <li>
+              <img src="images/Cc home.svg" alt="" />
+              <p>Credit Card</p>
+            </li>
+            <li>
+              <img src="images/Ln home.svg" alt="" />
+              <p>Loans</p>
+            </li>
+            <li>
+              <img src="images/Sc home.svg" alt="" />
+              <p>Services</p>
+            </li>
+            <li>
+              <img src="images/Pr home.svg" alt="" />
+              <p>My Priviledges</p>
+            </li>
+            <li>
+              <img src="images/Se home.svg" alt="" />
+              <p>Setting</p>
+            </li>
+          </ul>
+        </div>
+        <div class="text">Overview</div>
+        <div class="view">
+          <div id="hid">
+            <img src="images/Settings header.svg" alt="" />
+          </div>
+          <div id="hid">
+            <img src="images/notifications.svg" alt="" />
+          </div>
+          <div>
+            <img src="images/Mask Group.svg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div id="Search">
+        <div class="searching">
+          <img src="images/Search icon.svg" alt="">
+          <input type="text" placeholder="Search for something" />
+        </div>
+      </div>
+      <div class="all_three_cards">
+        <div class="CARD">
+          <h1>My Cards</h1>
+          <div class="ATM_card">
+            <div class="top-card">
+              <div id="Balance">
+                <p>Balance</p>
+                <h1>$5,756</h1>
+              </div>
+              <div class="chip">
+                <img src="images/Chip_Card.svg" alt="" />
+              </div>
+            </div>
+            <div class="middle_card">
+              <div id="holder">
+                <p>CARD HOLDER</p>
+                <h1>Eddy Cusuma</h1>
+              </div>
+              <div id="holder">
+                <p>VALID THRU</p>
+                <h1>12/22</h1>
+              </div>
+            </div>
+            <div class="bottom_card">
+              <div id="holder">
+                <h1>3778 **** **** 1234</h1>
+              </div>
+              <div class="chip">
+                <img src="images/VISA.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="CARD2">
+          <h1>See All</h1>
+          <div class="ATM_card_two">
+            <div class="top-card_two">
+              <div id="Balance_two">
+                <p>Balance</p>
+                <h1>$9,756</h1>
+              </div>
+              <div class="chip_two">
+                <img src="images/Chip_Card2.svg" alt="" />
+              </div>
+            </div>
+            <div class="middle_card_two">
+              <div id="holder_two">
+                <p>CARD HOLDER</p>
+                <h1>Eddy Cusuma</h1>
+              </div>
+              <div id="holder_two">
+                <p>VALID THRU</p>
+                <h1>12/22</h1>
+              </div>
+            </div>
+            <div class="bottom_card_two">
+              <div id="holder_two_down">
+                <h1>8283 **** **** 2728</h1>
+              </div>
+              <div class="chip">
+                <img src="images/Visa_two.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="CARD3 card3-hide1">
+          <h1>Recent Transaction</h1>
+          <div class="box">
+            <div class="top-box">
+              <div>
+                <img src="images/transac1.svg" alt="" />
+              </div>
+              <div id="Transaction">
+                <h4>Apple card</h4>
+                <p>21 May 2024</p>
+              </div>
+              <div class="debit">
+                <h4>-$1,000</h4>
+              </div>
+            </div>
+            <div class="middle-box">
+              <div>
+                <img src="images/transac2.svg" alt="" />
+              </div>
+              <div id="Transaction">
+                <h4>Deposit Paypal</h4>
+                <p>21 May 2024</p>
+              </div>
+              <div class="Credit">
+                <h4>+$2,500</h4>
+              </div>
+            </div>
+            <div class="bottom-box">
+              <div>
+                <img src="images/transac3.svg" alt="" />
+              </div>
+              <div id="Transaction">
+                <h4>Jemi Wilson</h4>
+                <p>28 April 2024</p>
+              </div>
+              <div class="Credit">
+                <h4>+$5,400</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="CARD3 card3-hide2">
+        <h1>Recent Transaction</h1>
+        <div class="box">
+          <div class="top-box">
+            <div>
+              <img src="images/transac1.svg" alt="" />
+            </div>
+            <div id="Transaction">
+              <h4>Apple card</h4>
+              <p>21 May 2024</p>
+            </div>
+            <div class="debit">
+              <h4>-$1,000</h4>
+            </div>
+          </div>
+          <div class="middle-box">
+            <div>
+              <img src="images/transac2.svg" alt="" />
+            </div>
+            <div id="Transaction">
+              <h4>Deposit Paypal</h4>
+              <p>21 May 2024</p>
+            </div>
+            <div class="Credit">
+              <h4>+$2,500</h4>
+            </div>
+          </div>
+          <div class="bottom-box">
+            <div>
+              <img src="images/transac3.svg" alt="" />
+            </div>
+            <div id="Transaction">
+              <h4>Jemi Wilson</h4>
+              <p>28 April 2024</p>
+            </div>
+            <div class="Credit">
+              <h4>+$5,400</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="chart-container">
+        <div class="chart-one">
+          <h1>Weekly Activity</h1>
+          <div class="cht-bar">
+            <canvas id="myChartbar"></canvas>
+          </div>
+        </div>
+        <div class="chart-two">
+          <h1>Expense Statistics</h1>
+          <canvas id="myBarChart"></canvas>
+        </div>
+      </div>
+      <div class="bl-home">
+        <div class="Quick-tf">
+          <h1>Quick Transfer</h1>
+          <div class="Accounts-cont">
+            <div class="top-acct">
+              <div class="one">
+                <img src="images/CEO.svg" alt="" />
+                <h1>Livia Bator</h1>
+                <p>CEO</p>
+              </div>
+              <div class="one">
+                <img src="images/Director.svg" alt="" />
+                <h1>Randy Press</h1>
+                <p>Director</p>
+              </div>
+              <div class="one">
+                <img src="images/Designer.svg" alt="" />
+                <h1>Workman</h1>
+                <p>Designer</p>
+              </div>
+              <div class="hide-arrow">
+                <img src="images/Arrow fr.svg" alt="" />
+              </div>
+            </div>
+            <div class="send-it">
+              <h1>Write Amount</h1>
+              <div class="input-send-amount">
+                <input type="number" placeholder="525.50" />
+                <button>Send <img src="images/transfer.svg" alt="" /></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="line-container">
+          <h1>Balance History</h1>
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+    </section>
+    <!-- Transactions -->
+    <section class="transaction" id="transaction">
+      <div class="header">
+        <div class="txt">Transactions</div>
+        <div class="view">
+          <div>
+            <img src="images/Settings header.svg" alt="" />
+          </div>
+          <div>
+            <img src="images/notifications.svg" alt="" />
+          </div>
+          <div>
+            <img src="images/Mask Group.svg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="all_three_cards">
+        <div class="CARD">
+          <h1>My Cards</h1>
+          <div class="ATM_card">
+            <div class="top-card">
+              <div id="Balance">
+                <p>Balance</p>
+                <h1>$5,756</h1>
+              </div>
+              <div class="chip">
+                <img src="images/Chip_Card.svg" alt="" />
+              </div>
+            </div>
+            <div class="middle_card">
+              <div id="holder">
+                <p>CARD HOLDER</p>
+                <h1>Eddy Cusuma</h1>
+              </div>
+              <div id="holder">
+                <p>VALID THRU</p>
+                <h1>12/22</h1>
+              </div>
+            </div>
+            <div class="bottom_card">
+              <div id="holder">
+                <h1>3778 **** **** 1234</h1>
+              </div>
+              <div class="chip">
+                <img src="images/VISA.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="CARD2">
+          <h1>+ Add Card</h1>
+          <div class="ATM_card_two">
+            <div class="top-card_two">
+              <div id="Balance_two">
+                <p>Balance</p>
+                <h1>$9,756</h1>
+              </div>
+              <div class="chip_two">
+                <img src="images/Chip_Card2.svg" alt="" />
+              </div>
+            </div>
+            <div class="middle_card_two">
+              <div id="holder_two">
+                <p>CARD HOLDER</p>
+                <h1>Eddy Cusuma</h1>
+              </div>
+              <div id="holder_two">
+                <p>VALID THRU</p>
+                <h1>12/22</h1>
+              </div>
+            </div>
+            <div class="bottom_card_two">
+              <div id="holder_two_down">
+                <h1>8283 **** **** 2728</h1>
+              </div>
+              <div class="chip">
+                <img src="images/Visa_two.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ex">
+          <h1>My Expenses</h1>
+          <div class="Expense">
+            <div class="top-expense">
+              <div>
+                <img src="images/rent.png" alt="" />
+              </div>
+              <div id="Transaction">
+                <h4>Rent Payment</h4>
+              </div>
+              <div class="Credit">
+                <h4>-$4,000</h4>
+              </div>
+            </div>
+            <div class="middle-expense">
+              <div>
+                <img src="images/tax.png" alt="" />
+              </div>
+              <div id="Transaction">
+                <h4>Tax Payment</h4>
+              </div>
+              <div class="Credit">
+                <h4>-$2,670</h4>
+              </div>
+            </div>
+            <div class="bottom-expense">
+              <div>
+                <img src="images/fast-food.png" alt="" />
+              </div>
+              <div id="Transaction">
+                <h4>Food</h4>
+              </div>
+              <div class="Credit">
+                <h4>+$1,400</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="table">
+        <h1>Recent Transactions</h1>
+        <div class="table-container table-one">
+          <table>
+            <thead>
+              <tr>
+                <th>Description</th>
+                <th>Transaction ID</th>
+                <th>Type</th>
+                <th>Card</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Receipt</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Spotify Subscription</td>
+                <td>#12548796</td>
+                <td>Shopping</td>
+                <td>1234 ****</td>
+                <td>28 Jan, 12.30 AM</td>
+                <td class="negative">-2,500</td>
+                <td><button>Download</button></td>
+              </tr>
+              <tr>
+                <td>Freepik Sales</td>
+                <td>#12548796</td>
+                <td>Transfer</td>
+                <td>1234 ****</td>
+                <td>25 Jan, 10.40 PM</td>
+                <td class="positive">+750</td>
+                <td><button>Download</button></td>
+              </tr>
+              <tr>
+                <td>Mobile Service</td>
+                <td>#12548796</td>
+                <td>Service</td>
+                <td>1234 ****</td>
+                <td>20 Jan, 10.40 PM</td>
+                <td class="negative">-150</td>
+                <td><button>Download</button></td>
+              </tr>
+              <tr>
+                <td>Wilson</td>
+                <td>#12548796</td>
+                <td>Transfer</td>
+                <td>1234 ****</td>
+                <td>15 Jan, 03.29 PM</td>
+                <td class="negative">-1,050</td>
+                <td><button>Download</button></td>
+              </tr>
+              <tr>
+                <td>Emily</td>
+                <td>#12548796</td>
+                <td>Transfer</td>
+                <td>1234 ****</td>
+                <td>14 Jan, 10.40 PM</td>
+                <td class="positive">+840</td>
+                <td><button>Download</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-container table-two">
+          <table>
+            <thead>
+              <tr>
+                <th>Description</th>
+                <th>Transaction ID</th>
+                <th>Type</th>
+                <th>Card</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Receipt</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Amazon Purchase</td>
+                <td>#45896213</td>
+                <td>Shopping</td>
+                <td>5678 ****</td>
+                <td>10 Jun, 11.15 AM</td>
+                <td class="negative">-350</td>
+                <td><button>Download</button></td>
+              </tr>
+              <tr>
+                <td>Salary Deposit</td>
+                <td>#45896213</td>
+                <td>Deposit</td>
+                <td>5678 ****</td>
+                <td>8 Jun, 09.00 AM</td>
+                <td class="positive">+3,500</td>
+                <td><button>Download</button></td>
+              </tr>
+              <tr>
+                <td>Utility Bill Payment</td>
+                <td>#45896213</td>
+                <td>Bill Payment</td>
+                <td>5678 ****</td>
+                <td>5 Jun, 04.30 PM</td>
+                <td class="negative">-200</td>
+                <td><button>Download</button></td>
+              </tr>
+              <tr>
+                <td>Netflix Subscription</td>
+                <td>#45896213</td>
+                <td>Shopping</td>
+                <td>5678 ****</td>
+                <td>2 Jun, 10.00 PM</td>
+                <td class="negative">-1,000</td>
+                <td><button>Download</button></td>
+              </tr>
+              <tr>
+                <td>Restaurant Dinner</td>
+                <td>#45896213</td>
+                <td>Dining</td>
+                <td>5678 ****</td>
+                <td>1 Jun, 08.45 PM</td>
+                <td class="negative">-80</td>
+                <td><button>Download</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-container table-three">
+          <table>
+            <thead>
+              <tr>
+                <th>Description</th>
+                <th>Transaction ID</th>
+                <th>Type</th>
+                <th>Card</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Receipt</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Grocery Shopping</td>
+                <td>#56234987</td>
+                <td>Shopping</td>
+                <td>1234 ****</td>
+                <td>12 Jun, 02.30 PM</td>
+                <td class="negative">-150</td>
+                <td><button>Download</button></td>
+              </tr>
+              <tr>
+                <td>Freelance Payment</td>
+                <td>#56234988</td>
+                <td>Deposit</td>
+                <td>1234 ****</td>
+                <td>10 Jun, 01.00 PM</td>
+                <td class="positive">+1,200</td>
+                <td><button>Download</button></td>
+              </tr>
+              <tr>
+                <td>Gym Membership</td>
+                <td>#56234989</td>
+                <td>Subscription</td>
+                <td>1234 ****</td>
+                <td>7 Jun, 06.00 AM</td>
+                <td class="negative">-50</td>
+                <td><button>Download</button></td>
+              </tr>
+              <tr>
+                <td>Electricity Bill</td>
+                <td>#56234990</td>
+                <td>Bill Payment</td>
+                <td>1234 ****</td>
+                <td>5 Jun, 05.00 PM</td>
+                <td class="negative">-300</td>
+                <td><button>Download</button></td>
+              </tr>
+              <tr>
+                <td>Book Purchase</td>
+                <td>#56234991</td>
+                <td>Shopping</td>
+                <td>1234 ****</td>
+                <td>3 Jun, 11.00 AM</td>
+                <td class="negative">-40</td>
+                <td><button>Download</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-container table-four">
+          <table>
+            <thead>
+              <tr>
+                <th>Description</th>
+                <th>Transaction ID</th>
+                <th>Type</th>
+                <th>Card</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Receipt</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Flight Ticket</td>
+                <td>#67345219</td>
+                <td>Travel</td>
+                <td>9876 ****</td>
+                <td>14 Jun, 07.00 AM</td>
+                <td class="negative">-1,200</td>
+                <td><button>Download</button></td>
+              </tr>
+              <tr>
+                <td>Client Payment</td>
+                <td>#67345220</td>
+                <td>Deposit</td>
+                <td>9876 ****</td>
+                <td>12 Jun, 02.00 PM</td>
+                <td class="positive">+2,000</td>
+                <td><button>Download</button></td>
+              </tr>
+              <tr>
+                <td>Car Repair</td>
+                <td>#67345221</td>
+                <td>Service</td>
+                <td>9876 ****</td>
+                <td>10 Jun, 11.30 AM</td>
+                <td class="negative">-500</td>
+                <td><button>Download</button></td>
+              </tr>
+              <tr>
+                <td>Internet Bill</td>
+                <td>#67345222</td>
+                <td>Bill Payment</td>
+                <td>9876 ****</td>
+                <td>8 Jun, 09.15 AM</td>
+                <td class="negative">-100</td>
+                <td><button>Download</button></td>
+              </tr>
+              <tr>
+                <td>Coffee Shop</td>
+                <td>#67345223</td>
+                <td>Dining</td>
+                <td>9876 ****</td>
+                <td>6 Jun, 04.00 PM</td>
+                <td class="negative">-20</td>
+                <td><button>Download</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="bt-transact">
+        <button onclick="prev()"><< Previous page</button>
+        <div class="next-numbers">
+          <p onclick="showTableOne()">1</p>
+          <p onclick="showTableTwo()">2</p>
+          <p onclick="showTableThree()">3</p>
+          <p onclick="showTableFour()">4</p>
+        </div>
+        <button onclick="next()">Next page >></button>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

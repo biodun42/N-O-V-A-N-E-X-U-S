@@ -1,0 +1,239 @@
+@media (max-width: 1295px) {
+  .CARD,
+  .CARD2 {
+    min-width: 450px;
+  }
+  .CARD3 {
+    min-width: 400px;
+  }
+}
+@media screen and (max-width: 1190px) {
+  .Accounts-cont,
+  .line-container {
+    min-width: 500px;
+  }
+}
+@media screen and (max-width: 1161px) {
+  .chart-one {
+    min-width: 650px;
+  }
+  .chart-two {
+    min-width: 550px;
+  }
+}
+@media screen and (max-width: 772px) {
+  .all_three_cards {
+    gap: 2rem;
+  }
+  .chart-container {
+    flex-direction: column;
+  }
+  .chart-one,
+  .chart-two {
+    width: 100%;
+    min-width: 100%;
+  }
+  .box {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  canvas {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+  }
+  .ATM_card {
+    box-shadow: none;
+  }
+}
+@media screen and (max-width: 611px) {
+  .cht-bar {
+    width: 100%;
+    height: 380px;
+  }
+  .bl-home {
+    overflow: hidden;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .Accounts-cont,
+  .line-container {
+    min-width: 100%;
+  }
+  /* .chart-two {
+    display: none;
+  } */
+  .Accounts-cont {
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+@media screen and (max-width: 562px) {
+  .all_three_cards {
+    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .chart-container,
+  .bl-home {
+    padding: 0.5rem;
+  }
+  .card3-hide1 {
+    display: none;
+  }
+  .card3-hide2 {
+    padding: 0.5rem;
+    width: 100%;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-grow: 1;
+    background-color: #f5f7fa;
+  }
+  .box {
+    padding: 0.5rem;
+    width: 100%;
+  }
+  #transaction {
+    width: fit-content;
+  }
+  .top-acct {
+    gap: 1rem;
+  }
+  .Accounts-cont {
+    padding: 0.5rem;
+  }
+}
+@media screen and (max-width: 549px) {
+  .all_three_cards {
+    gap: 1rem;
+  }
+  .CARD,
+  .CARD2 {
+    min-width: 100%;
+  }
+  .ATM_card,
+  .ATM_card_two {
+    gap: 1.5rem;
+  }
+  #Balance p,
+  #Balance_two p {
+    font-size: 13px;
+  }
+  #Balance h1,
+  #Balance_two h1 {
+    font-size: 20px;
+  }
+  #holder p,
+  #holder_two p {
+    font-size: 13px;
+  }
+  #holder h1,
+  #holder_two h1,
+  #holder_two_down h1 {
+    font-size: 20px;
+  }
+
+  .one img {
+    width: 50px;
+    height: 50px;
+  }
+  .send-it h1 {
+    font-size: 20px;
+  }
+  .sidebar {
+    display: none;
+  }
+  .home-section,
+  .transaction {
+    background-color: #f5f7fa;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 0.5s ease;
+  }
+  .hamburger-menu {
+    display: block;
+  }
+  #hid {
+    display: none;
+  }
+  .header {
+    background-color: #f5f7fa;
+  }
+  .view {
+    width: fit-content;
+  }
+  .home-section .text {
+    color: #11101d;
+  }
+  .searching {
+    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .send-it h1 {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 464px) {
+  .card3-hide2 {
+    display: none;
+  }
+  .chart-one {
+    display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  #Balance p {
+    font-size: 12px;
+  }
+  #Balance h1 {
+    font-size: 17px;
+  }
+  #holder p {
+    font-size: 12px;
+  }
+  #holder h1 {
+    font-size: 17px;
+  }
+  .top-card,
+  .top-card_two {
+    padding: 1rem 1rem;
+  }
+  .middle_card,
+  .middle_card_two {
+    padding: 0 1rem 0 1rem;
+  }
+  .bottom_card,
+  .bottom_card_two {
+    padding: 1rem 1rem;
+  }
+  .ATM_card,
+  .ATM_card_two {
+    gap: 1.2rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .send-it {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hide-arrow {
+    display: none;
+  }
+  .input-send-amount button {
+    padding: 0.7rem;
+  }
+  .home-section .text {
+    font-size: 25px;
+  }
+}
