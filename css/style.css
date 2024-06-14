@@ -300,7 +300,7 @@ body.active {
   top: 0;
   background-color: #11101d;
   left: -300px;
-  width: 300px-300px;
+  width: 300px;
   height: 100%;
   transition: left 0.9s;
   z-index: 1000;
