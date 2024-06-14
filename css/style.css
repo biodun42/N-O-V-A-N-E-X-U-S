@@ -299,8 +299,8 @@ body.active {
   position: fixed;
   top: 0;
   background-color: #11101d;
-  left: -100%;
-  width: 100%;
+  left: -300px;
+  width: 300px-300px;
   height: 100%;
   transition: left 0.9s;
   z-index: 1000;
