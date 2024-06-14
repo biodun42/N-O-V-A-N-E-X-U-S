@@ -1,6 +1,10 @@
 let sidebar = document.querySelector(".sidebar");
 let closeBtn = document.querySelector("#btn");
 let searchBtn = document.querySelector(".bx-search");
+const hamMenu = document.querySelector(".hamburger-menu");
+const offScreenMenu = document.querySelector(".off-screen-menu");
+const container = document.querySelector("body");
+const hamBars = document.querySelectorAll(".hambar");
 
 closeBtn.addEventListener("click", () => {
   sidebar.classList.toggle("open");
@@ -30,6 +34,9 @@ function transactionPage() {
   transaction.style.display = "block";
   home.classList.add("inactive");
   transaction.classList.add("inactive");
+  hamBars.forEach((bar) => {
+    bar.classList.remove("active");
+  });
   setTimeout(() => {
     home.classList.add("active");
     home.classList.remove("inactive");
@@ -42,6 +49,9 @@ function homePage() {
   transaction.style.display = "none";
   home.classList.add("inactive");
   transaction.classList.add("inactive");
+  hamBars.forEach((bar) => {
+    bar.classList.remove("active");
+  });
   setTimeout(() => {
     home.classList.remove("active");
     home.classList.remove("inactive");
@@ -55,14 +65,20 @@ const tableTwo = document.querySelector(".table-two");
 const tableThree = document.querySelector(".table-three");
 const tableFour = document.querySelector(".table-four");
 
-let one = true, two = false, three = false, four = false;
+let one = true,
+  two = false,
+  three = false,
+  four = false;
 
 function showTableOne() {
   tableOne.classList.remove("active");
   tableTwo.classList.remove("active");
   tableThree.classList.remove("active");
   tableFour.classList.remove("active");
-  one = true; two = false; three = false; four = false;
+  one = true;
+  two = false;
+  three = false;
+  four = false;
 }
 
 function showTableTwo() {
@@ -70,7 +86,10 @@ function showTableTwo() {
   tableTwo.classList.add("active");
   tableThree.classList.remove("active");
   tableFour.classList.remove("active");
-  one = false; two = true; three = false; four = false;
+  one = false;
+  two = true;
+  three = false;
+  four = false;
 }
 
 function showTableThree() {
@@ -78,7 +97,10 @@ function showTableThree() {
   tableTwo.classList.remove("active");
   tableThree.classList.add("active");
   tableFour.classList.remove("active");
-  one = false; two = false; three = true; four = false;
+  one = false;
+  two = false;
+  three = true;
+  four = false;
 }
 
 function showTableFour() {
@@ -86,7 +108,10 @@ function showTableFour() {
   tableTwo.classList.remove("active");
   tableThree.classList.remove("active");
   tableFour.classList.add("active");
-  one = false; two = false; three = false; four = true;
+  one = false;
+  two = false;
+  three = false;
+  four = true;
 }
 
 function prev() {
@@ -113,10 +138,6 @@ function next() {
   }
 }
 // The Hambuger Menu
-const hamMenu = document.querySelector(".hamburger-menu");
-const offScreenMenu = document.querySelector(".off-screen-menu");
-const container = document.querySelector("body");
-const hamBars = document.querySelectorAll(".hambar");
 
 hamMenu.addEventListener("click", () => {
   hamMenu.classList.toggle("active");
@@ -124,8 +145,7 @@ hamMenu.addEventListener("click", () => {
   container.classList.toggle("active");
   hamBars.forEach((bar) => {
     bar.classList.toggle("active");
-  }
-  );
+  });
 });
 
 const navs = document.querySelectorAll(".nav");
@@ -133,5 +153,6 @@ navs.forEach((nav) => {
   nav.addEventListener("click", function () {
     hamMenu.classList.remove("active");
     offScreenMenu.classList.remove("active");
+    container.classList.remove("active");
   });
 });
