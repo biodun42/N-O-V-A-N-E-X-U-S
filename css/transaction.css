@@ -44,7 +44,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2.5rem;
+  gap: 1rem;
   padding: 1.5rem;
   background-color: white;
   border-radius: 35px;
@@ -55,18 +55,27 @@
   width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-expense > div,
+.middle-expense > div,
+.bottom-expense > div{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+
 }
 .top-expense img,
 .middle-expense img,
 .bottom-expense img {
-  width: 55px;
-  height: 55px;
+  width: 40px;
+  height: 40px;
 }
 #Transaction {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -90,7 +99,6 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
 }
 .bottom-expense {
   width: 100%;
@@ -98,7 +106,6 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
 }
 .table {
   width: 100%;
@@ -250,7 +257,10 @@ button:hover {
     min-width: 450px;
   }
   .CARD3{
-    min-width: 400px;
+    min-width: 300px;
+  }
+  .Expense{
+    gap: 1rem;
   }
 }
 @media screen and (max-width: 1161px) {
@@ -330,7 +340,7 @@ button:hover {
 @media screen and (max-width: 549px) {
   .CARD,
   .CARD2 {
-    min-width: 100%;
+    min-width: 90%;
   }
   .ATM_card,
   .ATM_card_two {
@@ -389,6 +399,19 @@ button:hover {
   .transaction .txt {
     color: #11101d;
   }
+  .hide-btn{
+    display: block;
+  }
+  .next-numbers{
+    gap: 0;
+  }
+  .bt-transact{
+    gap: 0.5rem;
+  }
+  .bt-transact button{
+    padding: 5px;
+    font-size: 10px;
+  }
   .searching {
     display: block;
     display: flex;
@@ -401,8 +424,12 @@ button:hover {
   }
 }
 @media screen and (max-width: 464px) {
-  .card3-hide2 {
-    display: none;
+  .Expense{
+    padding: 1rem;
+    gap: 1rem;
+  }
+  #transaction{
+    width: fit-content;
   }
 }
 @media screen and (max-width: 400px) {
