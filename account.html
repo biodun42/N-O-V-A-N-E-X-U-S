@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>N O V A N E X U S</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/account.css">
+    <link rel="stylesheet" href="css/responsive.css">    
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class="bx bxs-bank icon"></i>
+        <div class="logo_name">N O V A</div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <i class="bx bx-search"></i>
+          <input type="text" placeholder="Search..." />
+          <span class="tooltip">Search</span>
+        </li>
+        <li>
+          <a href="index.html" class="active">
+            <i class="bx bxs-home"></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+          <span class="tooltip">Dashboard</span>
+        </li>
+        <li>
+          <a href="transaction.html" class="inactive">
+            <i class="bx bx-transfer-alt"></i>
+            <span class="links_name">Transactions</span>
+          </a>
+          <span class="tooltip">Transactions</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-user"></i> <span class="links_name">Accounts</span>
+          </a>
+          <span class="tooltip">Accounts</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-pie-chart-alt-2"></i>
+            <span class="links_name">Investment</span>
+          </a>
+          <span class="tooltip">Investment</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-credit-card"></i>
+            <span class="links_name">Credit Card</span>
+          </a>
+          <span class="tooltip">Card</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-dollar-circle"></i>
+            <span class="links_name">Loans</span>
+          </a>
+          <span class="tooltip">Loans</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-check-circle"></i>
+            <span class="links_name">Services</span>
+          </a>
+          <span class="tooltip">Services</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-bulb"></i>
+            <span class="links_name">My Priviledges</span>
+          </a>
+          <span class="tooltip">Setting</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-cog"></i>
+            <span class="links_name">Setting</span>
+          </a>
+          <span class="tooltip">Setting</span>
+        </li>
+        <li class="profile">
+          <div class="profile-details">
+            <img src="images/Mask Group.svg" alt="profileImg" />
+            <div class="name_job">
+              <div class="name">Abiodun</div>
+              <div class="job">Web designer</div>
+            </div>
+          </div>
+          <i class="bx bx-log-out" id="log_out"></i>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section" id="home">
+      <div class="header">
+        <div class="hamburger-menu">
+          <div class="hambar bar1"></div>
+          <div class="hambar bar2"></div>
+          <div class="hambar bar3"></div>
+        </div>
+        <div class="off-screen-menu">
+          <ul class="nav-off">
+            <li class="nav one">
+              <img src="images/Dh Home.svg" alt="" />
+              <p>Dashboard</p>
+            </li>
+            <li class="nav two" onclick="transactionPage()">
+              <img src="images/Tr home.svg" alt="" />
+              <p>Transaction</p>
+            </li>
+            <li class="nav three">
+              <img src="images/Ur home.svg" alt="" />
+              <p>Accounts</p>
+            </li>
+            <li class="nav four">
+              <img src="images/In home.svg" alt="" />
+              <p>Investment</p>
+            </li>
+            <li class="nav five">
+              <img src="images/Cc home.svg" alt="" />
+              <p>Credit Card</p>
+            </li>
+            <li class="nav six">
+              <img src="images/Ln home.svg" alt="" />
+              <p>Loans</p>
+            </li>
+            <li class="nav seven">
+              <img src="images/Sc home.svg" alt="" />
+              <p>Services</p>
+            </li>
+            <li class="nav eight">
+              <img src="images/Pr home.svg" alt="" />
+              <p>My Priviledges</p>
+            </li>
+            <li class="nav nine">
+              <img src="images/Se home.svg" alt="" />
+              <p>Setting</p>
+            </li>
+          </ul>
+        </div>
+        <div class="text">Accounts</div>
+        <div class="view">
+          <div id="hid">
+            <img src="images/Settings header.svg" alt="" />
+          </div>
+          <div id="hid">
+            <img src="images/notifications.svg" alt="" />
+          </div>
+          <div>
+            <img src="images/Mask Group.svg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div id="Search">
+        <div class="searching">
+          <img src="images/Search icon.svg" alt="" />
+          <input type="text" placeholder="Search for something" />
+        </div>
+      </div>
+      </section>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

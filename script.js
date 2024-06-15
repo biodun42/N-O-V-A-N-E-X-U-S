@@ -119,6 +119,7 @@ navs.forEach((nav) => {
 
 const home = document.querySelector(".one");
 const transaction = document.querySelector(".two");
+const account = document.querySelector(".three");
 
 home.addEventListener("click", () => {
   window.location.href = "index.html";
@@ -126,4 +127,8 @@ home.addEventListener("click", () => {
 
 transaction.addEventListener("click", () => {
   window.location.href = "transaction.html";
+});
+
+account.addEventListener("click", () => {
+  window.location.href = "account.html";
 });
