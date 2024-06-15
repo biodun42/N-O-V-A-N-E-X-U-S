@@ -6,7 +6,9 @@
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
 }
-/* Transaction */
+body.active{
+  position: fixed;
+}
 .transaction{
   background-color: #f5f7fa;
   overflow: hidden;
@@ -203,17 +205,18 @@ button:hover {
   color: #1814f3;
   border-bottom: 1px solid black;
 }
-.table-one.active {
-  display: none;
-}
 .table-two.active,
 .table-three.active,
 .table-four.active{
   display: block;
 }
-.table-one{
+.table-one,
+.table-two,
+.table-three,
+.table-four {
   width: 100%;
 }
+.table-one.active,
 .table-two,
 .table-three,
 .table-four {
@@ -374,7 +377,6 @@ button:hover {
   .sidebar {
     display: none;
   }
-  .home-section,
   .transaction {
     background-color: #f5f7fa;
     position: relative;

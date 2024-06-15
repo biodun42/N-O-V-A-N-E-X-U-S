@@ -9,7 +9,6 @@
 }
 body.active {
   position: fixed;
-  overflow-y: auto;
 }
 .sidebar {
   position: fixed;
@@ -264,7 +263,7 @@ body.active {
 }
 .hambar {
   width: 70%;
-  height: 4px;
+  height: 5px;
   background-color: grey;
   border-radius: 25px;
   position: absolute;
@@ -295,10 +294,10 @@ body.active {
   position: fixed;
   top: 0;
   background-color: black;
-  left: -100%;
+  top: -100%;
   width: 100%;
-  height: 100%;
-  transition: left 0.9s;
+  height: 100vh;
+  transition: top 0.4s;
   z-index: 1000;
   display: flex;
   flex-direction: column;
@@ -307,14 +306,14 @@ body.active {
   padding-top: 1rem;
 }
 .off-screen-menu.active {
-  left: 0;
+  top: 0;
 }
 .nav-off {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  gap: 2.5rem;
+  gap: 2.6rem;
   overflow-y: auto;
   padding: 0.6rem;
   scrollbar-width: none;
