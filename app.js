@@ -4,7 +4,7 @@ const ctx = document.getElementById('myChartbar').getContext('2d');
 const data1 = {
     labels: ['','Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
     datasets: [{
-        label: 'Monthly Data',
+        label: 'Daily Data',
         data: [100, 380, 150, 450, 590, 180, 430, 50],
         fill: true,
         borderColor: 'grey',
@@ -30,7 +30,7 @@ const def = {
                 },
                 title: {
                     display: true,
-                    text: 'Months',
+                    text: 'Days',
                     color: '#6c757d',
                     font: {
                         size: 19,

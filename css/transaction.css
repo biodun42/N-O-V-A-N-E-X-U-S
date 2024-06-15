@@ -1,0 +1,443 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+/* Transaction */
+.transaction{
+  background-color: #f5f7fa;
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+.txt {
+  color: white;
+  font-size: 28px;
+  font-weight: 500;
+  margin: 18px;
+}
+.ex {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1.5rem;
+}
+.ex > h1 {
+  font-size: 22px;
+  color: #343c6a;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+}
+.Expense {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 35px;
+  flex-grow: 1;
+  box-shadow: 0 5px 10px rgba(173, 172, 172, 0.3);
+}
+.top-expense {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.top-expense img,
+.middle-expense img,
+.bottom-expense img {
+  width: 55px;
+  height: 55px;
+}
+#Transaction {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#Transaction h4 {
+  font-size: 18px;
+  color: #232323;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+}
+#Transaction p {
+  font-size: 17px;
+  color: #718ebf;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+}
+.middle-expense {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.bottom-expense {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1.5rem;
+  padding: 1rem;
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+.table > h1 {
+  font-size: 25px;
+  color: #343c6a;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+}
+.table-container {
+  width: 100%;
+  background: #fff;
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  padding: 20px;
+  gap: 2rem;
+}
+
+thead {
+  background-color: #f9f9f9;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+}
+
+th {
+  background-color: #f1f1f1;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.negative {
+  color: red;
+}
+
+.positive {
+  color: green;
+}
+
+button {
+  padding: 10px 15px;
+  color: #123288;
+  background-color: white;
+  border: 1px solid #123288;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #123288;
+  color: white;
+}
+.bt-transact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+}
+.bt-transact button {
+  color: black;
+  background-color: transparent;
+  border-bottom: 2px solid #1814f3;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.bt-transact button:hover {
+  color: #1814f3;
+  border-bottom: 1px solid black;
+}
+.table-one.active {
+  display: none;
+}
+.table-two.active,
+.table-three.active,
+.table-four.active{
+  display: block;
+}
+.table-one{
+  width: 100%;
+}
+.table-two,
+.table-three,
+.table-four {
+  display: none;
+}
+.next-numbers {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.next-numbers p {
+  background-color: transparent;
+  text-align: center;
+  color: black;
+  padding: 7px 12px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.next-numbers p:active {
+  color: white;
+  cursor: pointer;
+  background-color: black;
+  padding: 7px 12px;
+  border-radius: 5px;
+}
+.next-numbers p:focus {
+  color: white;
+  cursor: pointer;
+  background-color: black;
+  padding: 7px 12px;
+  border-radius: 5px;
+}
+
+/* Responsive */
+@media (max-width: 1295px) {
+  .CARD,
+  .CARD2 {
+    min-width: 450px;
+  }
+  .CARD3{
+    min-width: 400px;
+  }
+}
+@media screen and (max-width: 1161px) {
+  .table-one,
+  .table-two,
+  .table-three,
+  .table-four,
+  table{
+    min-width: 1000px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .bt-transact{
+    gap: 1rem;
+  }
+  .next-numbers{
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 772px) {
+  .all_three_cards {
+    gap: 2rem;
+  }
+  .box {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .ATM_card {
+    box-shadow: none;
+  }
+  /* .table-one table thead tr #hide-table,
+  .table-one table tbody tr #hide-table {
+    display: none;
+  } */
+  .table {
+    min-width: 100%;
+  }
+  .hide-btn{
+    display: none;
+  }
+}
+@media screen and (max-width: 562px) {
+  .all_three_cards {
+    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .card3-hide1 {
+    display: none;
+  }
+  .card3-hide2 {
+    width: 100%;
+    padding: 0.5rem;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-grow: 1;
+    background-color: #f5f7fa;
+  }
+  .box {
+    padding: 0.5rem;
+    width: 100%;
+  }
+  .top-acct {
+    gap: 1rem;
+  }
+  .Accounts-cont {
+    padding: 0.5rem;
+  }
+  .all_three_cards {
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 549px) {
+  .CARD,
+  .CARD2 {
+    min-width: 100%;
+  }
+  .ATM_card,
+  .ATM_card_two {
+    gap: 1.5rem;
+  }
+  #Balance p,
+  #Balance_two p {
+    font-size: 13px;
+  }
+  #Balance h1,
+  #Balance_two h1 {
+    font-size: 20px;
+  }
+  #holder p,
+  #holder_two p {
+    font-size: 13px;
+  }
+  #holder h1,
+  #holder_two h1,
+  #holder_two_down h1 {
+    font-size: 20px;
+  }
+
+  .one img {
+    width: 50px;
+    height: 50px;
+  }
+  .send-it h1 {
+    font-size: 20px;
+  }
+  .sidebar {
+    display: none;
+  }
+  .home-section,
+  .transaction {
+    background-color: #f5f7fa;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 0.5s ease;
+  }
+  .hamburger-menu {
+    display: block;
+  }
+  #hid {
+    display: none;
+  }
+  .header {
+    background-color: #f5f7fa;
+  }
+  .view {
+    width: fit-content;
+  }
+  .home-section .text,
+  .transaction .txt {
+    color: #11101d;
+  }
+  .searching {
+    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .send-it h1 {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 464px) {
+  .card3-hide2 {
+    display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  #Balance p {
+    font-size: 12px;
+  }
+  #Balance h1 {
+    font-size: 17px;
+  }
+  #holder p {
+    font-size: 12px;
+  }
+  #holder h1 {
+    font-size: 17px;
+  }
+  .top-card,
+  .top-card_two {
+    padding: 1rem 1rem;
+  }
+  .middle_card,
+  .middle_card_two {
+    padding: 0 1rem 0 1rem;
+  }
+  .bottom_card,
+  .bottom_card_two {
+    padding: 1rem 1rem;
+  }
+  .ATM_card,
+  .ATM_card_two {
+    gap: 1.2rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .home-section .text,
+  .transaction .txt {
+    font-size: 25px;
+  }
+}

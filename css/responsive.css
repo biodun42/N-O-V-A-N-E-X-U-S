@@ -3,7 +3,8 @@
   .CARD2 {
     min-width: 450px;
   }
-  .CARD3 {
+  .CARD3,
+  .ex {
     min-width: 400px;
   }
 }
@@ -20,6 +21,12 @@
   .chart-two {
     min-width: 550px;
   }
+  .table-one,
+  table {
+    min-width: 900px;
+  }
+}
+@media screen and (max-width: 1050px) {
 }
 @media screen and (max-width: 772px) {
   .all_three_cards {
@@ -45,12 +52,16 @@
   .ATM_card {
     box-shadow: none;
   }
+  .table-one table thead tr #hide-table,
+  .table-one table tbody tr #hide-table {
+    display: none;
+  }
+  .table {
+    min-width: 100%;
+    overflow-x: hidden;
+  }
 }
 @media screen and (max-width: 611px) {
-  .cht-bar {
-    width: 100%;
-    height: 380px;
-  }
   .bl-home {
     overflow: hidden;
     flex-direction: column;
@@ -60,9 +71,6 @@
   .line-container {
     min-width: 100%;
   }
-  /* .chart-two {
-    display: none;
-  } */
   .Accounts-cont {
     background-color: transparent;
     box-shadow: none;
@@ -186,8 +194,10 @@
   .card3-hide2 {
     display: none;
   }
-  .chart-one {
-    display: none;
+  .cht-bar {
+    margin-bottom: 3rem;
+    width: 100%;
+    height: 280px;
   }
 }
 @media screen and (max-width: 400px) {

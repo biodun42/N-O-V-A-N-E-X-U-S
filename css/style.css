@@ -227,8 +227,7 @@ body.active {
   width: 50px;
   background: none;
 }
-.home-section,
-.transaction {
+.home-section {
   background-color: #f5f7fa;
   overflow: hidden;
   position: relative;
@@ -263,13 +262,10 @@ body.active {
   cursor: pointer;
   padding: 1rem;
 }
-.hambar.active {
-  background-color: white;
-}
 .hambar {
   width: 70%;
   height: 4px;
-  background-color: black;
+  background-color: grey;
   border-radius: 25px;
   position: absolute;
   top: 50%;
@@ -298,7 +294,7 @@ body.active {
 .off-screen-menu {
   position: fixed;
   top: 0;
-  background-color: #11101d;
+  background-color: black;
   left: -300px;
   width: 300px;
   height: 100%;
@@ -323,7 +319,7 @@ body.active {
   padding: 0.6rem;
   scrollbar-width: none;
 }
-.nav-off li {
+.nav-off li{
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -883,263 +879,4 @@ canvas {
   color: #343c6a;
   font-weight: 600;
   font-family: "Inter", sans-serif;
-}
-
-/* Transaction */
-.txt {
-  color: white;
-  font-size: 28px;
-  font-weight: 500;
-  margin: 18px;
-}
-#home.active,
-#transaction.active {
-  display: none;
-  transition: all 0.5s ease;
-  opacity: 1;
-}
-
-#home.inactive,
-#transaction.inactive {
-  transition: opacity 0.5s ease-in-out;
-  opacity: 0;
-}
-li {
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
-}
-
-li.inactive {
-  opacity: 0;
-  pointer-events: none;
-}
-
-li.active {
-  opacity: 1;
-  pointer-events: auto;
-}
-#transaction {
-  display: none;
-}
-.ex {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  gap: 1.5rem;
-}
-.ex > h1 {
-  font-size: 22px;
-  color: #343c6a;
-  font-weight: 600;
-  font-family: "Inter", sans-serif;
-}
-.Expense {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2.5rem;
-  padding: 1.5rem;
-  background-color: white;
-  border-radius: 35px;
-  flex-grow: 1;
-  box-shadow: 0 5px 10px rgba(173, 172, 172, 0.3);
-}
-.top-expense {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-.top-expense img,
-.middle-expense img,
-.bottom-expense img {
-  width: 55px;
-  height: 55px;
-}
-#Transaction {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#Transaction h4 {
-  font-size: 18px;
-  color: #232323;
-  font-weight: 500;
-  font-family: "Inter", sans-serif;
-}
-#Transaction p {
-  font-size: 17px;
-  color: #718ebf;
-  font-weight: 400;
-  font-family: "Inter", sans-serif;
-}
-.middle-expense {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-}
-.bottom-expense {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-}
-.table {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  gap: 1.5rem;
-  padding: 1rem;
-}
-.table > h1 {
-  font-size: 25px;
-  color: #343c6a;
-  font-weight: 600;
-  font-family: "Inter", sans-serif;
-}
-.table-container {
-  width: 100%;
-  overflow-x: auto;
-  background: #fff;
-  border-radius: 25px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  padding: 20px;
-  gap: 2rem;
-}
-
-thead {
-  background-color: #f9f9f9;
-}
-
-th,
-td {
-  padding: 12px 15px;
-  text-align: left;
-  font-family: "Inter", sans-serif;
-}
-
-th {
-  background-color: #f1f1f1;
-}
-
-tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-tbody tr:hover {
-  background-color: #f1f1f1;
-}
-
-.negative {
-  color: red;
-}
-
-.positive {
-  color: green;
-}
-
-button {
-  padding: 10px 15px;
-  color: #123288;
-  background-color: white;
-  border: 1px solid #123288;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #123288;
-  color: white;
-}
-.bt-transact {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-  width: 100%;
-  margin-bottom: 3rem;
-  margin-top: 1rem;
-}
-.bt-transact button {
-  color: black;
-  background-color: transparent;
-  border-bottom: 2px solid #1814f3;
-  cursor: pointer;
-  transition: all 0.5s;
-}
-.bt-transact button:hover {
-  color: #1814f3;
-  border-bottom: 1px solid black;
-}
-.table-one.active {
-  display: none;
-}
-.table-two.active {
-  display: block;
-}
-.table-three.active {
-  display: block;
-}
-.table-four.active {
-  display: block;
-}
-.table-two {
-  display: none;
-}
-.table-three {
-  display: none;
-}
-.table-four {
-  display: none;
-}
-.next-numbers {
-  width: fit-content;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
-.next-numbers p {
-  background-color: transparent;
-  text-align: center;
-  color: black;
-  padding: 7px 12px;
-  cursor: pointer;
-  transition: all 0.5s;
-}
-.next-numbers p:active {
-  color: white;
-  cursor: pointer;
-  background-color: black;
-  padding: 7px 12px;
-  border-radius: 5px;
-}
-.next-numbers p:focus {
-  color: white;
-  cursor: pointer;
-  background-color: black;
-  padding: 7px 12px;
-  border-radius: 5px;
 }
