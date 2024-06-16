@@ -301,7 +301,7 @@ body.active {
   left: -100%;
   width: 100%;
   height: 100vh;
-  transition: left 0.3s;
+  transition: left 0.9s;
   z-index: 1000;
   display: flex;
   flex-direction: column;
