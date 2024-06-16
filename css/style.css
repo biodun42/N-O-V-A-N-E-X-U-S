@@ -10,6 +10,10 @@
 body.active {
   position: fixed;
 }
+.home-section.active,
+.transaction.active {
+  position: fixed;
+}
 .sidebar {
   position: fixed;
   left: 0;
@@ -297,7 +301,7 @@ body.active {
   left: -100%;
   width: 100%;
   height: 100vh;
-  transition: left 0.4s ease-in-out;
+  transition: left 0.3s;
   z-index: 1000;
   display: flex;
   flex-direction: column;
